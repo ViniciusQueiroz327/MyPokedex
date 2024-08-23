@@ -176,7 +176,6 @@
     border-radius: 1rem;
     padding: .3rem;
     background-color: rgb(209, 206, 206);
-<<<<<<< HEAD
     transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
 }
 
@@ -203,8 +202,6 @@
 #buttonFight:hover {
     background-color: rgb(161, 159, 159);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
-=======
->>>>>>> 58856aa0b37526b3e39105e1bae87d3b4a0b5dba
 }
 
 .hidden {

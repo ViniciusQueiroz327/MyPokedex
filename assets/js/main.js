@@ -4,7 +4,6 @@ const loadMore = document.getElementById('loadMore')
 const searchButton = document.getElementById('searchButton')
 const searchInput = document.getElementById('searchInput')
 
-<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', () => {
     const buttonFight = document.getElementById('buttonFight');
     const buttonPokedex = document.getElementById('buttonPokedex');
@@ -22,8 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-=======
->>>>>>> 58856aa0b37526b3e39105e1bae87d3b4a0b5dba
 const limit = 9
 let offset = 0
 
