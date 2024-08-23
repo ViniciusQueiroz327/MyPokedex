@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "Bulbasaur",
+        "image": "assets/imgs/bulbasaur.png",
+        "attacks": [
+            { "name": "Tackle", "damage": 40 },
+            { "name": "Vine Whip", "damage": 45 }
+        ],
+        "hp": 45
+    },
+    {
+        "id": 2,
+        "name": "Ivysaur",
+        "image": "assets/imgs/ivysaur.png",
+        "attacks": [
+            { "name": "Tackle", "damage": 40 },
+            { "name": "Vine Whip", "damage": 45 }
+        ],
+        "hp": 60
+    },
+    {
+        "id": 3,
+        "name": "Venusaur",
+        "image": "assets/imgs/venusaur.png",
+        "attacks": [
+            { "name": "Tackle", "damage": 40 },
+            { "name": "Solar Beam", "damage": 120 }
+        ],
+        "hp": 80
+    },
+    {
+        "id": 4,
+        "name": "Charmander",
+        "image": "assets/imgs/charmander.png",
+        "attacks": [
+            { "name": "Scratch", "damage": 40 },
+            { "name": "Ember", "damage": 40 }
+        ],
+        "hp": 39
+    },
+    {
+        "id": 5,
+        "name": "Charmeleon",
+        "image": "assets/imgs/charmeleon.png",
+        "attacks": [
+            { "name": "Scratch", "damage": 40 },
+            { "name": "Flame Wheel", "damage": 60 }
+        ],
+        "hp": 58
+    },
+    {
+        "id": 6,
+        "name": "Charizard",
+        "image": "assets/imgs/charizar.png",
+        "attacks": [
+            { "name": "Scratch", "damage": 40 },
+            { "name": "Flamethrower", "damage": 90 }
+        ],
+        "hp": 78
+    },
+    {
+        "id": 7,
+        "name": "assets/imgs/squirtle.png",
+        "image": "",
+        "attacks": [
+            { "name": "Tackle", "damage": 40 },
+            { "name": "Water Gun", "damage": 40 }
+        ],
+        "hp": 44
+    },
+    {
+        "id": 8,
+        "name": "assets/imgs/wartortle.png",
+        "image": "",
+        "attacks": [
+            { "name": "Tackle", "damage": 40 },
+            { "name": "Water Gun", "damage": 40 }
+        ],
+        "hp": 59
+    },
+    {
+        "id": 9,
+        "name": "assets/imgs/blastoise.png",
+        "image": "",
+        "attacks": [
+            { "name": "Tackle", "damage": 40 },
+            { "name": "Hydropump", "damage": 110 }
+        ],
+        "hp": 79
+    }
+]

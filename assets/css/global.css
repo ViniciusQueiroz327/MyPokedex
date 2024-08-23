@@ -1,0 +1,141 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+<<<<<<< HEAD
+=======
+body {
+    background-color: #cac5c5;
+}
+
+.content {
+    position: relative;
+    padding: 1rem 1rem 0 1rem;
+    background-color: #c7c1c1;
+    min-height: 100vh; /* Garante que ocupe toda a altura da viewport */
+    z-index: 2;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+>>>>>>> 58856aa0b37526b3e39105e1bae87d3b4a0b5dba
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+#searchInput {
+    border-radius: 1rem;
+    background-color: rgb(243, 241, 241);
+    margin-right: .5rem;
+}
+
+#searchButton {
+    border-radius: 1rem;
+    font-weight: bold;
+    background-color: rgb(209, 206, 206);
+<<<<<<< HEAD
+    transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+}
+
+#searchButton:hover {
+    background-color: rgb(161, 159, 159);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    position: relative;
+    padding: 1rem 1rem 0 1rem;
+    background-color: #c7c1c1;
+    min-height: 100vh; /* Garante que ocupe toda a altura da viewport */
+    z-index: 2;
+}
+
+body {
+    background-color: #cac5c5;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+=======
+>>>>>>> 58856aa0b37526b3e39105e1bae87d3b4a0b5dba
+}
+
+#titulo {
+    margin: 1rem;
+}
+
+#logoFundo {
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Garante que a imagem fique na base */
+    z-index: -1; 
+}
+
+#logoFundo img {
+    opacity: 0.1;
+    width: auto; 
+    height: auto; 
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura */
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #c7c1c1, #000, #c7c1c1);
+    margin: 0;
+}
+
+/* Media Queries para Responsividade */
+
+/* Para telas com largura mínima de 380px */
+@media screen and (min-width: 380px) {
+    #titulo {
+        font-size: 1.5rem;
+    }
+
+    #logoFundo img {
+        width: 80%;
+        height: auto;
+    }
+}
+
+/* Para telas com largura mínima de 576px */
+@media screen and (min-width: 576px) {
+    #titulo {
+        font-size: 1.8rem;
+    }
+
+    #logoFundo img {
+        width: 70%; 
+        height: auto;
+    }
+}
+
+/* Para telas com largura mínima de 992px */
+@media screen and (min-width: 992px) {
+    #titulo {
+        font-size: 2rem;
+    }
+
+    #logoFundo img {
+        width: 60%;
+        height: auto;
+    }
+}

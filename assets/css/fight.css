@@ -1,0 +1,68 @@
+.pokedexMode {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+#buttonPokedex {
+    border-radius: 1rem;
+    font-weight: bold;
+    background-color: rgb(209, 206, 206);
+    transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+}
+
+#buttonPokedex:hover {
+    background-color: rgb(161, 159, 159);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.botaoLutar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+#lutar {
+    border-radius: 1rem;
+    font-weight: bold;
+    background-color: rgb(209, 206, 206);
+    transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+}
+
+#lutar:hover {
+    background-color: rgb(161, 159, 159);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.fightArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c7c1c1;
+    min-height: 80vh; /* Garante que ocupe toda a altura da viewport */
+    z-index: 2;
+}
+
+.pokes {
+    min-height: 40vh;
+    width: 10rem;
+    border-radius: 1.5rem;
+    border: 2px solid black;
+}
+
+#pokeOne {
+    background-color: rgb(87, 87, 212);
+}
+
+#pokeTwo {
+    background-color: rgb(199, 54, 54);
+}
+
+#versus {
+    width: 2rem;
+    height: auto;
+}
