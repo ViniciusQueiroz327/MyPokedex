@@ -61,8 +61,8 @@
     },
     {
         "id": 7,
-        "name": "assets/imgs/squirtle.png",
-        "image": "",
+        "name": "Squirtle",
+        "image": "assets/imgs/squirtle.png",
         "attacks": [
             { "name": "Tackle", "damage": 40 },
             { "name": "Water Gun", "damage": 40 }
@@ -71,8 +71,8 @@
     },
     {
         "id": 8,
-        "name": "assets/imgs/wartortle.png",
-        "image": "",
+        "name": "Wartortle",
+        "image": "assets/imgs/wartortle.png",
         "attacks": [
             { "name": "Tackle", "damage": 40 },
             { "name": "Water Gun", "damage": 40 }
@@ -81,12 +81,72 @@
     },
     {
         "id": 9,
-        "name": "assets/imgs/blastoise.png",
-        "image": "",
+        "name": "Blastoise",
+        "image": "assets/imgs/blastoise.png",
         "attacks": [
             { "name": "Tackle", "damage": 40 },
             { "name": "Hydropump", "damage": 110 }
         ],
         "hp": 79
+    },
+    {
+        "id": 656,
+        "name": "Froakie",
+        "image": "assets/imgs/",
+        "attacks": [
+            { "name": "Bubble", "damage": 40 },
+            { "name": "Water Pulse", "damage": 60 }
+        ],
+        "hp": 41
+    },
+    {
+        "id": 657,
+        "name": "Frogadier",
+        "image": "assets/imgs/",
+        "attacks": [
+            { "name": "Smack Down", "damage": 50 },
+            { "name": "Water Pulse", "damage": 60 }
+        ],
+        "hp": 72
+    },
+    {
+        "id": 658,
+        "name": "Greninja",
+        "image": "assets/imgs/",
+        "attacks": [
+            { "name": "Water Shuriken", "damage": 75 },
+            { "name": "Dark Pulse", "damage": 80 }
+        ],
+        "hp": 72
+    },
+    {
+        "id": 720,
+        "name": "Hoopa",
+        "image": "assets/imgs/",
+        "attacks": [
+            { "name": "Psybeam", "damage": 65 },
+            { "name": "Hyperspace Hole", "damage": 80 }           
+        ],
+        "hp": 80
+    },
+    {
+        "id": 717,
+        "name": "Yveltal",
+        "image": "assets/imgs/",
+        "attacks": [
+            { "name": "Oblivion Wing", "damage": 80 },
+            { "name": "Hurricane", "damage": 110 }           
+        ],
+        "hp": 126
+    },
+    {
+        "id": 150,
+        "name": "Mewtwo",
+        "image": "assets/imgs/",
+        "attacks": [
+            { "name": "Shadow Ball", "damage": 80 },
+            { "name": "Psystrike", "damage": 100 }           
+        ],
+        "hp": 106
     }
 ]
