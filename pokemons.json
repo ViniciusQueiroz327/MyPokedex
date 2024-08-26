@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Bulbasaur",
-        "image": "assets/imgs/bulbasaur.png",
+        "image": "assets/imgs/pokes/bulbasaur.png",
         "attacks": [
             { "name": "Tackle", "damage": 40 },
             { "name": "Vine Whip", "damage": 45 }
@@ -12,7 +12,7 @@
     {
         "id": 2,
         "name": "Ivysaur",
-        "image": "assets/imgs/ivysaur.png",
+        "image": "assets/imgs/pokes/ivysaur.png",
         "attacks": [
             { "name": "Tackle", "damage": 40 },
             { "name": "Vine Whip", "damage": 45 }
@@ -22,7 +22,7 @@
     {
         "id": 3,
         "name": "Venusaur",
-        "image": "assets/imgs/venusaur.png",
+        "image": "assets/imgs/pokes/venusaur.png",
         "attacks": [
             { "name": "Tackle", "damage": 40 },
             { "name": "Solar Beam", "damage": 120 }
@@ -32,7 +32,7 @@
     {
         "id": 4,
         "name": "Charmander",
-        "image": "assets/imgs/charmander.png",
+        "image": "assets/imgs/pokes/charmander.png",
         "attacks": [
             { "name": "Scratch", "damage": 40 },
             { "name": "Ember", "damage": 40 }
@@ -42,7 +42,7 @@
     {
         "id": 5,
         "name": "Charmeleon",
-        "image": "assets/imgs/charmeleon.png",
+        "image": "assets/imgs/pokes/charmeleon.png",
         "attacks": [
             { "name": "Scratch", "damage": 40 },
             { "name": "Flame Wheel", "damage": 60 }
@@ -52,7 +52,7 @@
     {
         "id": 6,
         "name": "Charizard",
-        "image": "assets/imgs/charizar.png",
+        "image": "assets/imgs/pokes/charizar.png",
         "attacks": [
             { "name": "Scratch", "damage": 40 },
             { "name": "Flamethrower", "damage": 90 }
@@ -62,7 +62,7 @@
     {
         "id": 7,
         "name": "Squirtle",
-        "image": "assets/imgs/squirtle.png",
+        "image": "assets/imgs/pokes/squirtle.png",
         "attacks": [
             { "name": "Tackle", "damage": 40 },
             { "name": "Water Gun", "damage": 40 }
@@ -72,7 +72,7 @@
     {
         "id": 8,
         "name": "Wartortle",
-        "image": "assets/imgs/wartortle.png",
+        "image": "assets/imgs/pokes/wartortle.png",
         "attacks": [
             { "name": "Tackle", "damage": 40 },
             { "name": "Water Gun", "damage": 40 }
@@ -82,7 +82,7 @@
     {
         "id": 9,
         "name": "Blastoise",
-        "image": "assets/imgs/blastoise.png",
+        "image": "assets/imgs/pokes/blastoise.png",
         "attacks": [
             { "name": "Tackle", "damage": 40 },
             { "name": "Hydropump", "damage": 110 }
@@ -92,7 +92,7 @@
     {
         "id": 656,
         "name": "Froakie",
-        "image": "assets/imgs/",
+        "image": "assets/imgs/pokes/froakie.png",
         "attacks": [
             { "name": "Bubble", "damage": 40 },
             { "name": "Water Pulse", "damage": 60 }
@@ -102,7 +102,7 @@
     {
         "id": 657,
         "name": "Frogadier",
-        "image": "assets/imgs/",
+        "image": "assets/imgs/pokes/frogadier.png",
         "attacks": [
             { "name": "Smack Down", "damage": 50 },
             { "name": "Water Pulse", "damage": 60 }
@@ -112,7 +112,7 @@
     {
         "id": 658,
         "name": "Greninja",
-        "image": "assets/imgs/",
+        "image": "assets/imgs/pokes/greninja.png",
         "attacks": [
             { "name": "Water Shuriken", "damage": 75 },
             { "name": "Dark Pulse", "damage": 80 }
@@ -122,7 +122,7 @@
     {
         "id": 720,
         "name": "Hoopa",
-        "image": "assets/imgs/",
+        "image": "assets/imgs/pokes/hoopa.png",
         "attacks": [
             { "name": "Psybeam", "damage": 65 },
             { "name": "Hyperspace Hole", "damage": 80 }           
@@ -132,7 +132,7 @@
     {
         "id": 717,
         "name": "Yveltal",
-        "image": "assets/imgs/",
+        "image": "assets/imgs/pokes/yveltal.png",
         "attacks": [
             { "name": "Oblivion Wing", "damage": 80 },
             { "name": "Hurricane", "damage": 110 }           
@@ -142,7 +142,7 @@
     {
         "id": 150,
         "name": "Mewtwo",
-        "image": "assets/imgs/",
+        "image": "assets/imgs/pokes/mewtwo.png",
         "attacks": [
             { "name": "Shadow Ball", "damage": 80 },
             { "name": "Psystrike", "damage": 100 }           

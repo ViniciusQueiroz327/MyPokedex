@@ -52,6 +52,7 @@
     width: 10rem;
     border-radius: 1.5rem;
     border: 2px solid black;
+    padding: 10px;
 }
 
 #pokeOne {
@@ -60,6 +61,47 @@
 
 #pokeTwo {
     background-color: rgb(199, 54, 54);
+}
+
+.fightPokemon {
+    background-color: #ffffff1c; /* Cor de fundo interna (clara) */
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.fightPokemon ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.fightPokemon ul li {
+    margin: .5rem 0;
+    font-size: 16px;
+}
+
+.fightPokemon img {
+    max-width: 10rem; /* Ajusta o tamanho da imagem */
+    margin-bottom: 1rem;
+}
+
+.fightPokemon h2 {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.fightPokemon p {
+    font-size: 18px;
+    margin: 5px 0;
 }
 
 #versus {
