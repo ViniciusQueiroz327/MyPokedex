@@ -4,19 +4,14 @@ const loadMore = document.getElementById('loadMore')
 const searchButton = document.getElementById('searchButton')
 const searchInput = document.getElementById('searchInput')
 
+const resetButton = document.getElementById('resetButton')
+
 document.addEventListener('DOMContentLoaded', () => {
     const buttonFight = document.getElementById('buttonFight');
-    const buttonPokedex = document.getElementById('buttonPokedex');
 
     if (buttonFight) {
         buttonFight.addEventListener('click', () => {
             window.location.href = '/fight.html';
-        });
-    }
-
-    if (buttonPokedex) {
-        buttonPokedex.addEventListener('click', () => {
-            window.location.href = '/index.html';
         });
     }
 });
@@ -155,3 +150,7 @@ function searchPokemonByNameOrId() {
 }
 
 searchButton.addEventListener('click', searchPokemonByNameOrId)
+
+resetButton.addEventListener('click', () => {
+    location.reload()
+})

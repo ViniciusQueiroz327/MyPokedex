@@ -64,7 +64,7 @@
 }
 
 .fightPokemon {
-    background-color: #ffffff1c; /* Cor de fundo interna (clara) */
+    background-color: #ffffff1c;
     border-radius: 15px;
     padding: 10px;
     display: flex;
@@ -107,4 +107,17 @@
 #versus {
     width: 2rem;
     height: auto;
+}
+
+.buttonAttacks {
+    background-color: rgba(255, 255, 255, 0.199);
+    border-radius: 1rem;
+    padding: .5rem;
+    font-weight: bold;
+}
+
+.hpBar {
+    max-width: 100%;
+    background-color: green;
+    border: 1px solid black;
 }

@@ -1,8 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const buttonPokedex = document.getElementById('buttonPokedex');
+
+    if (buttonPokedex) {
+        buttonPokedex.addEventListener('click', () => {
+            window.location.href = '/index.html';
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
     const searchButton = document.getElementById('searchButton');
     const searchInput = document.getElementById('searchInput');
     const pokeOne = document.getElementById('pokeOne');
     const pokeTwo = document.getElementById('pokeTwo');
+    const lutar = document.getElementById('lutar');
+    const resetButton = document.getElementById('resetButton')
 
     searchButton.addEventListener('click', () => {
         const query = searchInput.value.trim();
@@ -27,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         renderPokemonInFight(pokemon, 'pokeTwo');
                     } 
                     else {
-                        alert('Já existem dois Pokémon selecionados. Reinicie para escolher novos Pokémon.');
+                        alert('Já existem dois Pokémon selecionados. Reinicie para escolher novos Pokémons.');
                     }
                 } 
                 else {
@@ -41,15 +53,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderPokemonInFight(pokemon, position) {
         const pokeDiv = document.getElementById(position);
-        pokeDiv.innerHTML = `
+        if(position === 'pokeOne') {
+            //console.log("entrou aqui One")
+            const firstAttackOne = pokemon.attacks[0]
+            const secondAttackOne = pokemon.attacks[1]
+            pokeDiv.innerHTML = `
             <div class="fightPokemon">
                 <img src="${pokemon.image}" alt="${pokemon.name}">
                 <h2>${pokemon.name}</h2>
-                <p>HP: ${pokemon.hp}</p>
+                <p id="hpPokeOne">HP: ${pokemon.hp}</p>
+                <progress class="hpBar" id="hpPokeOne" value="${pokemon.hp}" max=${pokemon.hp}></progress>
                 <ul>
-                    ${pokemon.attacks.map(attack => `<li>${attack.name}: ${attack.damage}</li>`).join('')}
+                    <li id="firstAttackOne"><button type="button" class="buttonAttacks" id="buttonFirstAttackOne" disabled>${firstAttackOne.name}: ${firstAttackOne.damage}</button></li>
+                    <li id="secondAttackOne"><button type="button" class="buttonAttacks" id="buttonSecondAttackOne" disabled>${secondAttackOne.name}: ${secondAttackOne.damage}</button></li>
                 </ul>
             </div>
         `;
+        }
+        else if(position === 'pokeTwo') {
+            //console.log("entrou aqui Two")
+            const firstAttackTwo = pokemon.attacks[0]
+            const secondAttackTwo = pokemon.attacks[1]
+            pokeDiv.innerHTML = `
+            <div class="fightPokemon">
+                <img src="${pokemon.image}" alt="${pokemon.name}">
+                <h2>${pokemon.name}</h2>
+                <p id="hpPokeTwo">HP: ${pokemon.hp}</p>
+                <progress class="hpBar" id="hpPokeTwo" value="${pokemon.hp}" max=${pokemon.hp}></progress>
+                <ul>
+                    <li id="firstAttackTwo"><button type="button" class="buttonAttacks" id="buttonFirstAttackTwo" disabled>${firstAttackTwo.name}: ${firstAttackTwo.damage}</button></li>
+                    <li id="secondAttackTwo"><button type="button" class="buttonAttacks" id="buttonSecondAttackTwo" disabled>${secondAttackTwo.name}: ${secondAttackTwo.damage}</button></li>
+                </ul>
+            </div>
+        `;
+        }
     }
+
+    lutar.addEventListener('click', () => {
+        //console.log('clicado')
+        document.getElementById('buttonFirstAttackOne').disabled = false
+        document.getElementById('buttonSecondAttackOne').disabled = false
+        document.getElementById('buttonFirstAttackTwo').disabled = false
+        document.getElementById('buttonSecondAttackTwo').disabled = false
+        document.getElementById('buttonPokedex').disabled = true
+        document.getElementById('searchButton').disabled = true
+        document.getElementById('lutar').disabled = true
+    })
+
+    resetButton.addEventListener('click', () => {
+        location.reload()
+    })
 });
