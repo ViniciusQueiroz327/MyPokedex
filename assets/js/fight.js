@@ -1,12 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const buttonPokedex = document.getElementById('buttonPokedex');
-
-    if (buttonPokedex) {
-        buttonPokedex.addEventListener('click', () => {
-            window.location.href = '/index.html';
-        });
-    }
-});
+//document.addEventListener('DOMContentLoaded', () => {
+//    const buttonPokedex = document.getElementById('buttonPokedex');
+//
+//    if (buttonPokedex) {
+//        buttonPokedex.addEventListener('click', () => {
+//            window.location.href = '/index.html';
+//        });
+//    }
+//});
 
 document.addEventListener('DOMContentLoaded', () => {
     const searchButton = document.getElementById('searchButton');

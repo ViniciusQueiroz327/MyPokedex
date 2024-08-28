@@ -6,15 +6,15 @@ const searchInput = document.getElementById('searchInput')
 
 const resetButton = document.getElementById('resetButton')
 
-document.addEventListener('DOMContentLoaded', () => {
-    const buttonFight = document.getElementById('buttonFight');
-
-    if (buttonFight) {
-        buttonFight.addEventListener('click', () => {
-            window.location.href = '/fight.html';
-        });
-    }
-});
+//document.addEventListener('DOMContentLoaded', () => {
+//    const buttonFight = document.getElementById('buttonFight');
+//
+//    if (buttonFight) {
+//        buttonFight.addEventListener('click', () => {
+//            window.location.href = '/fight.html';
+//        });
+//    }
+//});
 
 const limit = 9
 let offset = 0
