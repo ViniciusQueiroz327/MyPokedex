@@ -43,8 +43,21 @@
     justify-content: space-between;
     align-items: center;
     background-color: #c7c1c1;
-    min-height: 80vh; /* Garante que ocupe toda a altura da viewport */
+    min-height: 55vh; /* Garante que ocupe toda a altura da viewport */
     z-index: 2;
+}
+
+#exibirVencedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c7c1c1;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#exibirVencedor img {
+    max-width: 5rem;
 }
 
 .pokes {

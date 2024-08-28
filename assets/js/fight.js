@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="fightPokemon">
                 <img src="${pokemon.image}" alt="${pokemon.name}">
                 <h2>${pokemon.name}</h2>
-                <p id="hpPokeOne">HP: ${pokemon.hp}</p>
+                <p id="hpPokeOneText"">HP: ${pokemon.hp}</p>
                 <progress class="hpBar" id="hpPokeOne" value="${pokemon.hp}" max=${pokemon.hp}></progress>
                 <ul>
                     <li id="firstAttackOne"><button type="button" class="buttonAttacks" id="buttonFirstAttackOne" disabled>${firstAttackOne.name}: ${firstAttackOne.damage}</button></li>
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="fightPokemon">
                 <img src="${pokemon.image}" alt="${pokemon.name}">
                 <h2>${pokemon.name}</h2>
-                <p id="hpPokeTwo">HP: ${pokemon.hp}</p>
+                <p id="hpPokeTwoText">HP: ${pokemon.hp}</p>
                 <progress class="hpBar" id="hpPokeTwo" value="${pokemon.hp}" max=${pokemon.hp}></progress>
                 <ul>
                     <li id="firstAttackTwo"><button type="button" class="buttonAttacks" id="buttonFirstAttackTwo" disabled>${firstAttackTwo.name}: ${firstAttackTwo.damage}</button></li>
@@ -98,9 +98,80 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('buttonPokedex').disabled = true
         document.getElementById('searchButton').disabled = true
         document.getElementById('lutar').disabled = true
+
+        atacar();
     })
 
     resetButton.addEventListener('click', () => {
         location.reload()
     })
+
+    function atacar() {
+        const hpPokeOne = document.getElementById('hpPokeOne')
+        const hpPokeTwo = document.getElementById('hpPokeTwo')
+
+        const buttonFirstAttackOne = document.getElementById('buttonFirstAttackOne')
+        const buttonSecondAttackOne = document.getElementById('buttonSecondAttackOne')
+        const buttonFirstAttackTwo = document.getElementById('buttonFirstAttackTwo')
+        const buttonSecondAttackTwo = document.getElementById('buttonSecondAttackTwo')
+
+        const firstAttackOne = parseInt(buttonFirstAttackOne.textContent.split(': ')[1], 10);
+        const secondAttackOne = parseInt(buttonSecondAttackOne.textContent.split(': ')[1], 10);
+        const firstAttackTwo = parseInt(buttonFirstAttackTwo.textContent.split(': ')[1], 10);
+        const secondAttackTwo = parseInt(buttonSecondAttackTwo.textContent.split(': ')[1], 10);
+
+        buttonFirstAttackOne.addEventListener('click', () => {
+            hpPokeTwo.value -= firstAttackOne;
+            document.getElementById('hpPokeTwo').textContent = `HP: ${hpPokeTwo.value}`;
+            document.getElementById('hpPokeTwoText').textContent = `HP: ${hpPokeTwo.value}`;
+            if(hpPokeTwo.value <= 0) {
+                endFight(pokeOne.querySelector('h2').textContent, pokeOne.querySelector('img').src);
+            }
+        });
+
+        buttonSecondAttackOne.addEventListener('click', () => {
+            hpPokeTwo.value -= secondAttackOne;
+            document.getElementById('hpPokeTwo').textContent = `HP: ${hpPokeTwo.value}`;
+            document.getElementById('hpPokeTwoText').textContent = `HP: ${hpPokeTwo.value}`;
+            if(hpPokeTwo.value <= 0) {
+                endFight(pokeOne.querySelector('h2').textContent, pokeOne.querySelector('img').src);
+            }
+        });
+
+        buttonFirstAttackTwo.addEventListener('click', () => {
+            hpPokeOne.value -= firstAttackTwo;
+            document.getElementById('hpPokeOne').textContent = `HP: ${hpPokeOne.value}`;
+            document.getElementById('hpPokeOneText').textContent = `HP: ${hpPokeOne.value}`;
+            if(hpPokeOne.value <= 0) {
+                endFight(pokeTwo.querySelector('h2').textContent, pokeTwo.querySelector('img').src);
+            }
+        });
+
+        buttonSecondAttackTwo.addEventListener('click', () => {
+            hpPokeOne.value -= secondAttackTwo;
+            document.getElementById('hpPokeOne').textContent = `HP: ${hpPokeOne.value}`;
+            document.getElementById('hpPokeOneText').textContent = `HP: ${hpPokeOne.value}`;
+            if(hpPokeOne.value <= 0) {
+                endFight(pokeTwo.querySelector('h2').textContent, pokeTwo.querySelector('img').src);
+            }
+        });
+    }
+
+    function endFight(winnerName, winnerImage) {
+        document.getElementById('buttonFirstAttackOne').disabled = true
+        document.getElementById('buttonSecondAttackOne').disabled = true
+        document.getElementById('buttonFirstAttackTwo').disabled = true
+        document.getElementById('buttonSecondAttackTwo').disabled = true
+        document.getElementById('buttonPokedex').disabled = false
+        document.getElementById('searchButton').disabled = true
+        document.getElementById('lutar').disabled = true
+
+        const exibirVencedor = document.getElementById('exibirVencedor')
+
+        exibirVencedor.innerHTML = `
+            <h3>Vencedor:</h3>
+            <span>${winnerName}</span>
+            <img src="${winnerImage}" alt="${winnerName}">
+        `;
+    }
 });
