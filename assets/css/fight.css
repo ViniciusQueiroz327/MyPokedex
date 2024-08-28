@@ -45,6 +45,7 @@
     background-color: #c7c1c1;
     min-height: 55vh; /* Garante que ocupe toda a altura da viewport */
     z-index: 2;
+    padding-bottom: 3rem;
 }
 
 #exibirVencedor {
@@ -58,6 +59,10 @@
 
 #exibirVencedor img {
     max-width: 5rem;
+}
+
+#exibirVencedor span {
+    font-weight: bold;
 }
 
 .pokes {
