@@ -14,6 +14,7 @@ a {
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    cursor: pointer;
 }
 
 #searchInput {
@@ -28,6 +29,7 @@ a {
     background-color: rgb(209, 206, 206);
     transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
     margin: .1rem;
+    cursor: pointer;
 }
 
 .buttonsSearchClean:hover {

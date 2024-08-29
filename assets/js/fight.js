@@ -16,12 +16,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const lutar = document.getElementById('lutar');
     const resetButton = document.getElementById('resetButton')
 
-    searchButton.addEventListener('click', () => {
+    searchButton.addEventListener('click', () => { //clicando em search
         const query = searchInput.value.trim();
         if (query) {
             searchPokemon(query);
         } else {
             alert('Por favor, insira o nome ou ID do Pokémon.');
+        }
+    });
+
+    searchInput.addEventListener('keypress', (event) => { //pressionando enter
+        const query = searchInput.value.trim();
+        if(event.key === 'Enter') {
+            if (query) {
+                searchPokemon(query);
+            } else {
+                alert('Por favor, insira o nome ou ID do Pokémon.');
+            }
         }
     });
 
@@ -55,10 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const pokeDiv = document.getElementById(position);
         if(position === 'pokeOne') {
             //console.log("entrou aqui One")
+            const ordem = 1;
             const firstAttackOne = pokemon.attacks[0]
             const secondAttackOne = pokemon.attacks[1]
             pokeDiv.innerHTML = `
             <div class="fightPokemon">
+                <span id='pokemon${ordem}' class='ordemPokemons'>#${ordem}</span>
                 <img src="${pokemon.image}" alt="${pokemon.name}">
                 <h2>${pokemon.name}</h2>
                 <p id="hpPokeOneText"">HP: ${pokemon.hp}</p>
@@ -72,10 +85,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         else if(position === 'pokeTwo') {
             //console.log("entrou aqui Two")
+            const ordem = 2;
             const firstAttackTwo = pokemon.attacks[0]
             const secondAttackTwo = pokemon.attacks[1]
             pokeDiv.innerHTML = `
             <div class="fightPokemon">
+            <span id='pokemon${ordem}' class='ordemPokemons'>#${ordem}</span>
                 <img src="${pokemon.image}" alt="${pokemon.name}">
                 <h2>${pokemon.name}</h2>
                 <p id="hpPokeTwoText">HP: ${pokemon.hp}</p>
@@ -93,8 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
         //console.log('clicado')
         document.getElementById('buttonFirstAttackOne').disabled = false
         document.getElementById('buttonSecondAttackOne').disabled = false
-        document.getElementById('buttonFirstAttackTwo').disabled = false
-        document.getElementById('buttonSecondAttackTwo').disabled = false
+        document.getElementById('buttonFirstAttackTwo').disabled = true
+        document.getElementById('buttonSecondAttackTwo').disabled = true
         document.getElementById('buttonPokedex').disabled = true
         document.getElementById('searchButton').disabled = true
         document.getElementById('lutar').disabled = true
@@ -124,6 +139,10 @@ document.addEventListener('DOMContentLoaded', () => {
             hpPokeTwo.value -= firstAttackOne;
             document.getElementById('hpPokeTwo').textContent = `HP: ${hpPokeTwo.value}`;
             document.getElementById('hpPokeTwoText').textContent = `HP: ${hpPokeTwo.value}`;
+            buttonFirstAttackOne.disabled = true
+            buttonSecondAttackOne.disabled = true
+            buttonFirstAttackTwo.disabled = false
+            buttonSecondAttackTwo.disabled = false
             if(hpPokeTwo.value <= 0) {
                 endFight(pokeOne.querySelector('h2').textContent, pokeOne.querySelector('img').src);
             }
@@ -133,6 +152,10 @@ document.addEventListener('DOMContentLoaded', () => {
             hpPokeTwo.value -= secondAttackOne;
             document.getElementById('hpPokeTwo').textContent = `HP: ${hpPokeTwo.value}`;
             document.getElementById('hpPokeTwoText').textContent = `HP: ${hpPokeTwo.value}`;
+            buttonFirstAttackOne.disabled = true
+            buttonSecondAttackOne.disabled = true
+            buttonFirstAttackTwo.disabled = false
+            buttonSecondAttackTwo.disabled = false
             if(hpPokeTwo.value <= 0) {
                 endFight(pokeOne.querySelector('h2').textContent, pokeOne.querySelector('img').src);
             }
@@ -142,6 +165,10 @@ document.addEventListener('DOMContentLoaded', () => {
             hpPokeOne.value -= firstAttackTwo;
             document.getElementById('hpPokeOne').textContent = `HP: ${hpPokeOne.value}`;
             document.getElementById('hpPokeOneText').textContent = `HP: ${hpPokeOne.value}`;
+            buttonFirstAttackOne.disabled = false
+            buttonSecondAttackOne.disabled = false
+            buttonFirstAttackTwo.disabled = true
+            buttonSecondAttackTwo.disabled = true
             if(hpPokeOne.value <= 0) {
                 endFight(pokeTwo.querySelector('h2').textContent, pokeTwo.querySelector('img').src);
             }
@@ -151,6 +178,10 @@ document.addEventListener('DOMContentLoaded', () => {
             hpPokeOne.value -= secondAttackTwo;
             document.getElementById('hpPokeOne').textContent = `HP: ${hpPokeOne.value}`;
             document.getElementById('hpPokeOneText').textContent = `HP: ${hpPokeOne.value}`;
+            buttonFirstAttackOne.disabled = false
+            buttonSecondAttackOne.disabled = false
+            buttonFirstAttackTwo.disabled = true
+            buttonSecondAttackTwo.disabled = true
             if(hpPokeOne.value <= 0) {
                 endFight(pokeTwo.querySelector('h2').textContent, pokeTwo.querySelector('img').src);
             }

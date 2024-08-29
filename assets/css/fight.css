@@ -11,6 +11,7 @@
     font-weight: bold;
     background-color: rgb(209, 206, 206);
     transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
 }
 
 #buttonPokedex:hover {
@@ -31,6 +32,7 @@
     font-weight: bold;
     background-color: rgb(209, 206, 206);
     transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
 }
 
 #lutar:hover {
@@ -40,17 +42,17 @@
 
 .fightArea {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: #c7c1c1;
-    min-height: 55vh; /* Garante que ocupe toda a altura da viewport */
+    min-height: 55vh;
     z-index: 2;
     padding-bottom: 3rem;
 }
 
 #exibirVencedor {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: #c7c1c1;
     padding-top: 1rem;
@@ -59,10 +61,12 @@
 
 #exibirVencedor img {
     max-width: 5rem;
+    margin-left: 1rem;
 }
 
 #exibirVencedor span {
     font-weight: bold;
+    margin-left: 1rem;
 }
 
 .pokes {
@@ -75,10 +79,12 @@
 
 #pokeOne {
     background-color: rgb(87, 87, 212);
+    margin-right: 1rem;
 }
 
 #pokeTwo {
     background-color: rgb(199, 54, 54);
+    margin-left: 1rem;
 }
 
 .fightPokemon {
@@ -96,6 +102,11 @@
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
+.ordemPokemons {
+    align-self: flex-start; /* Alinha o span à esquerda */
+    font-weight: bold;
+}
+
 .fightPokemon ul {
     list-style: none;
     padding: 0;
@@ -108,7 +119,7 @@
 }
 
 .fightPokemon img {
-    max-width: 10rem; /* Ajusta o tamanho da imagem */
+    max-width: 10rem;
     margin-bottom: 1rem;
 }
 
@@ -138,4 +149,39 @@
     max-width: 100%;
     background-color: green;
     border: 1px solid black;
+}
+
+/* Media Queries para Responsividade */
+
+/* Ajuste para tablets e telas médias */
+@media screen and (min-width: 577px) and (max-width: 991px) {
+    .fightArea {
+        flex-direction: row;
+        min-height: 60vh;
+    }
+
+    .pokes {
+        width: 45%;
+        min-height: 35vh;
+    }
+
+    #versus {
+        width: 2.5rem;
+    }
+}
+
+/* Ajuste para telas maiores */
+@media screen and (min-width: 992px) {
+    .fightArea {
+        min-height: 55vh;
+    }
+
+    .pokes {
+        width: 20%;
+        min-height: 40vh;
+    }
+
+    #versus {
+        width: 3rem;
+    }
 }

@@ -177,6 +177,7 @@
     padding: .3rem;
     background-color: rgb(209, 206, 206);
     transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
 }
 
 #loadMore:hover {
